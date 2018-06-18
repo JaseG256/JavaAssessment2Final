@@ -8,7 +8,8 @@ public class SqlCommands {
      * @return SQL statement to select all the records
      */
     public String selectAll(String tableName){
-        return null;
+
+        return "SELECT * FROM customers;";
     }
 
     /**
@@ -18,7 +19,8 @@ public class SqlCommands {
      * @return SQL statement to get the column data
      */
     public String selectColumn(String tableName, String column) {
-        return null;
+
+        return "SELECT " + column + " FROM " + tableName +";";
     }
 
     /**
@@ -29,7 +31,8 @@ public class SqlCommands {
      * @return SQL statement to filter the data
      */
     public String selectWhere(String tableName, String column, String value) {
-        return null;
+
+        return "SELECT * FROM " + tableName + " WHERE " + column + " = \"" + value +"\";";
     }
 
     /**
@@ -39,7 +42,8 @@ public class SqlCommands {
      * @return SQL statement to select all the sorted records
      */
     public String selectInDescendingOrder(String tableName, String columnToSort) {
-        return null;
+
+        return "SELECT * FROM " + tableName + " ORDER BY " + columnToSort + " DESC;";
     }
 
     /**
@@ -48,7 +52,8 @@ public class SqlCommands {
      * @return SQL statement to count the record
      */
     public String count(String tableName) {
-        return null;
+
+        return "SELECT COUNT(*) FROM " + tableName + ";";
     }
 
     /**
@@ -57,7 +62,8 @@ public class SqlCommands {
      * @return SQL statement to count the record
      */
     public String countWhere(String tableName, String column, String value) {
-        return null;
+
+        return "SELECT COUNT(*) FROM " + tableName + " WHERE " + column + " =\" " + value + "\";";
     }
 
 }

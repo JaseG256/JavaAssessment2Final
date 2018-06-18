@@ -18,7 +18,24 @@ public class CsvParser {
      *                          or when there are missing fields
      */
     protected User parseRow(String row) throws BadDataException {
-        return null;
+        String[] fields = row.split(",");
+        User user = new User();
+        if (!fields[0].matches("[^0-9]")) {
+            throw new BadDataException("Not a number");
+        } else if (fields.length < 4) {
+            throw new BadDataException("Missing fields");
+        } else if (fields[0] == null) {
+            throw new BadDataException("First field missing");
+        } else {
+            user.setId(Integer.parseInt(fields[0]));
+            user.setFirstName(fields[1]);
+            user.setLastName(fields[2]);
+            user.setEmail(fields[3]);
+        }
+//        for (int i = 0; i < fields.length; i++) {
+//            user.setId();
+//        }
+        return user;
     }
 
     /**

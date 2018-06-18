@@ -9,16 +9,16 @@ public class SpeedComparatorTest {
 
     @Test
     public void testArraySort(){
-//        Animal horse = new Horse();
-//        Animal blueJay = new BlueJay();
-//        Animal redRobin = new RedRobin();
-//
-//        Animal[] animals = {redRobin, horse, blueJay};
-//
-//        Arrays.sort(animals, new SpeedComparator());
-//
-//        Assert.assertEquals(horse, animals[0]);
-//        Assert.assertEquals(blueJay, animals[1]);
-//        Assert.assertEquals(redRobin, animals[2]);
+        Animal horse = new Horse();
+        Animal blueJay = new BlueJay();
+        Animal redRobin = new RedRobin();
+
+        Animal[] animals = {redRobin, horse, blueJay};
+
+        Arrays.sort(animals, new SpeedComparator());
+
+        Assert.assertEquals(horse, animals[0]);
+        Assert.assertEquals(blueJay, animals[1]);
+        Assert.assertEquals(redRobin, animals[2]);
     }
 }
